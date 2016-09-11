@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0711989C1D848ECB00525F96 /* CloudVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711989B1D848ECB00525F96 /* CloudVision.swift */; };
+		0711989E1D848F6400525F96 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711989D1D848F6400525F96 /* Parser.swift */; };
+		071C42171D85071F0044D367 /* APIkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C42161D85071F0044D367 /* APIkey.swift */; };
+		079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */; };
+		56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC0F1D84524800BA048A /* AppDelegate.swift */; };
+		56ECAC121D84524800BA048A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC111D84524800BA048A /* ViewController.swift */; };
+		56ECAC151D84524800BA048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC131D84524800BA048A /* Main.storyboard */; };
+		56ECAC171D84524800BA048A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC161D84524800BA048A /* Assets.xcassets */; };
+		56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC181D84524800BA048A /* LaunchScreen.storyboard */; };
+		56ECAC251D84524800BA048A /* OmarviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC241D84524800BA048A /* OmarviewTests.swift */; };
+		9A495A3D8B17E8476EA3B9AF /* Pods_CalPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */; };
+		EC24420A1D84CADE00FB5B47 /* PosterLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2442091D84CADE00FB5B47 /* PosterLine.swift */; };
+		EC24420C1D84CAE500FB5B47 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56ECAC211D84524800BA048A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56ECAC041D84524800BA048A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56ECAC0B1D84524800BA048A;
+			remoteInfo = Omarview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0711989B1D848ECB00525F96 /* CloudVision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudVision.swift; sourceTree = "<group>"; };
+		0711989D1D848F6400525F96 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		071C42161D85071F0044D367 /* APIkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIkey.swift; sourceTree = "<group>"; };
+		079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		56ECAC0C1D84524800BA048A /* CalPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56ECAC0F1D84524800BA048A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		56ECAC111D84524800BA048A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		56ECAC141D84524800BA048A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		56ECAC161D84524800BA048A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56ECAC191D84524800BA048A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		56ECAC1B1D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56ECAC201D84524800BA048A /* CalPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56ECAC241D84524800BA048A /* OmarviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmarviewTests.swift; sourceTree = "<group>"; };
+		56ECAC261D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A179AEAC987AE1F186A43844 /* Pods-CalPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalPal/Pods-CalPal.release.xcconfig"; sourceTree = "<group>"; };
+		D02D03A1FAAE7E695D9467F1 /* Pods-CalPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalPal/Pods-CalPal.debug.xcconfig"; sourceTree = "<group>"; };
+		EC2442091D84CADE00FB5B47 /* PosterLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterLine.swift; sourceTree = "<group>"; };
+		EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56ECAC091D84524800BA048A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A495A3D8B17E8476EA3B9AF /* Pods_CalPal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56ECAC1D1D84524800BA048A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A7712B248A9FE3B18E84DF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D02D03A1FAAE7E695D9467F1 /* Pods-CalPal.debug.xcconfig */,
+				A179AEAC987AE1F186A43844 /* Pods-CalPal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		56ECAC031D84524800BA048A = {
+			isa = PBXGroup;
+			children = (
+				56ECAC0E1D84524800BA048A /* CalPal */,
+				56ECAC231D84524800BA048A /* CalPalTests */,
+				56ECAC0D1D84524800BA048A /* Products */,
+				4A7712B248A9FE3B18E84DF5 /* Pods */,
+				AF5B5A1C155F45F44EE62393 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		56ECAC0D1D84524800BA048A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56ECAC0C1D84524800BA048A /* CalPal.app */,
+				56ECAC201D84524800BA048A /* CalPalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56ECAC0E1D84524800BA048A /* CalPal */ = {
+			isa = PBXGroup;
+			children = (
+				079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */,
+				EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */,
+				EC2442091D84CADE00FB5B47 /* PosterLine.swift */,
+				56ECAC0F1D84524800BA048A /* AppDelegate.swift */,
+				071C42161D85071F0044D367 /* APIkey.swift */,
+				56ECAC111D84524800BA048A /* ViewController.swift */,
+				0711989D1D848F6400525F96 /* Parser.swift */,
+				0711989B1D848ECB00525F96 /* CloudVision.swift */,
+				56ECAC131D84524800BA048A /* Main.storyboard */,
+				56ECAC161D84524800BA048A /* Assets.xcassets */,
+				56ECAC181D84524800BA048A /* LaunchScreen.storyboard */,
+				56ECAC1B1D84524800BA048A /* Info.plist */,
+			);
+			name = CalPal;
+			path = Omarview;
+			sourceTree = "<group>";
+		};
+		56ECAC231D84524800BA048A /* CalPalTests */ = {
+			isa = PBXGroup;
+			children = (
+				56ECAC241D84524800BA048A /* OmarviewTests.swift */,
+				56ECAC261D84524800BA048A /* Info.plist */,
+			);
+			name = CalPalTests;
+			path = OmarviewTests;
+			sourceTree = "<group>";
+		};
+		AF5B5A1C155F45F44EE62393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56ECAC0B1D84524800BA048A /* CalPal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56ECAC291D84524800BA048A /* Build configuration list for PBXNativeTarget "CalPal" */;
+			buildPhases = (
+				FA415C906D52AD823A3EAC00 /* [CP] Check Pods Manifest.lock */,
+				56ECAC081D84524800BA048A /* Sources */,
+				56ECAC091D84524800BA048A /* Frameworks */,
+				56ECAC0A1D84524800BA048A /* Resources */,
+				87D43286519138B8FE5AEC64 /* [CP] Embed Pods Frameworks */,
+				3B16D23AA04B0630C0D8023D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalPal;
+			productName = Omarview;
+			productReference = 56ECAC0C1D84524800BA048A /* CalPal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56ECAC1F1D84524800BA048A /* CalPalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56ECAC2C1D84524800BA048A /* Build configuration list for PBXNativeTarget "CalPalTests" */;
+			buildPhases = (
+				56ECAC1C1D84524800BA048A /* Sources */,
+				56ECAC1D1D84524800BA048A /* Frameworks */,
+				56ECAC1E1D84524800BA048A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56ECAC221D84524800BA048A /* PBXTargetDependency */,
+			);
+			name = CalPalTests;
+			productName = OmarviewTests;
+			productReference = 56ECAC201D84524800BA048A /* CalPalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56ECAC041D84524800BA048A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Lucy Chai";
+				TargetAttributes = {
+					56ECAC0B1D84524800BA048A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X3ZX2F25Z3;
+					};
+					56ECAC1F1D84524800BA048A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X3ZX2F25Z3;
+						TestTargetID = 56ECAC0B1D84524800BA048A;
+					};
+				};
+			};
+			buildConfigurationList = 56ECAC071D84524800BA048A /* Build configuration list for PBXProject "CalPal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56ECAC031D84524800BA048A;
+			productRefGroup = 56ECAC0D1D84524800BA048A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56ECAC0B1D84524800BA048A /* CalPal */,
+				56ECAC1F1D84524800BA048A /* CalPalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56ECAC0A1D84524800BA048A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */,
+				56ECAC171D84524800BA048A /* Assets.xcassets in Resources */,
+				56ECAC151D84524800BA048A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56ECAC1E1D84524800BA048A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B16D23AA04B0630C0D8023D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalPal/Pods-CalPal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87D43286519138B8FE5AEC64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalPal/Pods-CalPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA415C906D52AD823A3EAC00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56ECAC081D84524800BA048A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0711989E1D848F6400525F96 /* Parser.swift in Sources */,
+				56ECAC121D84524800BA048A /* ViewController.swift in Sources */,
+				071C42171D85071F0044D367 /* APIkey.swift in Sources */,
+				0711989C1D848ECB00525F96 /* CloudVision.swift in Sources */,
+				079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */,
+				EC24420A1D84CADE00FB5B47 /* PosterLine.swift in Sources */,
+				56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */,
+				EC24420C1D84CAE500FB5B47 /* ParseJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56ECAC1C1D84524800BA048A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56ECAC251D84524800BA048A /* OmarviewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56ECAC221D84524800BA048A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56ECAC0B1D84524800BA048A /* CalPal */;
+			targetProxy = 56ECAC211D84524800BA048A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		56ECAC131D84524800BA048A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56ECAC141D84524800BA048A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		56ECAC181D84524800BA048A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56ECAC191D84524800BA048A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56ECAC271D84524800BA048A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56ECAC281D84524800BA048A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56ECAC2A1D84524800BA048A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D02D03A1FAAE7E695D9467F1 /* Pods-CalPal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Omarview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CalPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		56ECAC2B1D84524800BA048A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A179AEAC987AE1F186A43844 /* Pods-CalPal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Omarview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CalPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		56ECAC2D1D84524800BA048A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OmarviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OmarviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalPal.app/CalPal";
+			};
+			name = Debug;
+		};
+		56ECAC2E1D84524800BA048A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OmarviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.OmarviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalPal.app/CalPal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56ECAC071D84524800BA048A /* Build configuration list for PBXProject "CalPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56ECAC271D84524800BA048A /* Debug */,
+				56ECAC281D84524800BA048A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56ECAC291D84524800BA048A /* Build configuration list for PBXNativeTarget "CalPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56ECAC2A1D84524800BA048A /* Debug */,
+				56ECAC2B1D84524800BA048A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56ECAC2C1D84524800BA048A /* Build configuration list for PBXNativeTarget "CalPalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56ECAC2D1D84524800BA048A /* Debug */,
+				56ECAC2E1D84524800BA048A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56ECAC041D84524800BA048A /* Project object */;
+}
