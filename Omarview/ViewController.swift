@@ -9,12 +9,14 @@
 import UIKit
 import EventKitUI
 import SwiftyJSON
+import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, EKEventEditViewDelegate {
     
     @IBOutlet weak var ImageDisplay: UIImageView!
     
     var shouldDisplayCamera = true;
+    var audioPlayer = AVAudioPlayer()
     let tapCamera = UITapGestureRecognizer()
     
     override func viewDidLoad() {
@@ -32,6 +34,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func moooer(recognizer: UITapGestureRecognizer) {
+        let mooSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("moo", ofType: "m4a")!)
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOfURL:mooSound)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }catch {
+            print("Error getting the audio file")
+        }
     }
     
     @IBAction func openCameraPicker(recognizer: UITapGestureRecognizer) {

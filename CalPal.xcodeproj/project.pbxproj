@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		0711989C1D848ECB00525F96 /* CloudVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711989B1D848ECB00525F96 /* CloudVision.swift */; };
 		0711989E1D848F6400525F96 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711989D1D848F6400525F96 /* Parser.swift */; };
-		071C42171D85071F0044D367 /* APIkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C42161D85071F0044D367 /* APIkey.swift */; };
+		071C421C1D850FF90044D367 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C421B1D850FF90044D367 /* APIKey.swift */; };
+		071C421E1D8510950044D367 /* moo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 071C421D1D8510950044D367 /* moo.m4a */; };
 		079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */; };
 		56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC0F1D84524800BA048A /* AppDelegate.swift */; };
 		56ECAC121D84524800BA048A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC111D84524800BA048A /* ViewController.swift */; };
@@ -35,7 +36,8 @@
 /* Begin PBXFileReference section */
 		0711989B1D848ECB00525F96 /* CloudVision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudVision.swift; sourceTree = "<group>"; };
 		0711989D1D848F6400525F96 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		071C42161D85071F0044D367 /* APIkey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIkey.swift; sourceTree = "<group>"; };
+		071C421B1D850FF90044D367 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		071C421D1D8510950044D367 /* moo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = moo.m4a; sourceTree = "<group>"; };
 		079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		56ECAC0C1D84524800BA048A /* CalPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ECAC0F1D84524800BA048A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,12 +111,13 @@
 				EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */,
 				EC2442091D84CADE00FB5B47 /* PosterLine.swift */,
 				56ECAC0F1D84524800BA048A /* AppDelegate.swift */,
-				071C42161D85071F0044D367 /* APIkey.swift */,
+				071C421B1D850FF90044D367 /* APIKey.swift */,
 				56ECAC111D84524800BA048A /* ViewController.swift */,
 				0711989D1D848F6400525F96 /* Parser.swift */,
 				0711989B1D848ECB00525F96 /* CloudVision.swift */,
 				56ECAC131D84524800BA048A /* Main.storyboard */,
 				56ECAC161D84524800BA048A /* Assets.xcassets */,
+				071C421D1D8510950044D367 /* moo.m4a */,
 				56ECAC181D84524800BA048A /* LaunchScreen.storyboard */,
 				56ECAC1B1D84524800BA048A /* Info.plist */,
 			);
@@ -228,6 +231,7 @@
 			files = (
 				56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */,
 				56ECAC171D84524800BA048A /* Assets.xcassets in Resources */,
+				071C421E1D8510950044D367 /* moo.m4a in Resources */,
 				56ECAC151D84524800BA048A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,11 +300,11 @@
 			files = (
 				0711989E1D848F6400525F96 /* Parser.swift in Sources */,
 				56ECAC121D84524800BA048A /* ViewController.swift in Sources */,
-				071C42171D85071F0044D367 /* APIkey.swift in Sources */,
 				0711989C1D848ECB00525F96 /* CloudVision.swift in Sources */,
 				079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */,
 				EC24420A1D84CADE00FB5B47 /* PosterLine.swift in Sources */,
 				56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */,
+				071C421C1D850FF90044D367 /* APIKey.swift in Sources */,
 				EC24420C1D84CAE500FB5B47 /* ParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
