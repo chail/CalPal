@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-func parseLines(textJson: JSON) -> [PosterLine] {
+func parseLines(_ textJson: JSON) -> [PosterLine] {
     
     let responses: JSON = textJson["responses"][0]
     
@@ -23,16 +23,16 @@ func parseLines(textJson: JSON) -> [PosterLine] {
         if nodeCount > 0 {
             for index in 0...(nodeCount - 1) {
                 let description = textAnnotations[index]["description"].stringValue
-                if description.rangeOfString("\n") != nil {
-                    let lineText = description.componentsSeparatedByString("\n")
+                if description.range(of: "\n") != nil {
+                    let lineText = description.components(separatedBy: "\n")
                     for line in lineText {
                         lines.append(PosterLine.init(text: line))
                     }
-                    lineCount = lines[currLine].text.componentsSeparatedByString(" ").count
+                    lineCount = lines[currLine].text.components(separatedBy: " ").count
                 } else {
                     if currCount >= lineCount {
                         currLine += 1
-                        lineCount = lines[currLine].text.componentsSeparatedByString(" ").count
+                        lineCount = lines[currLine].text.components(separatedBy: " ").count
                         currCount = 0
                     }
                     

@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if (self.shouldDisplayCamera) {
             self.launchCameraPicker()
             self.shouldDisplayCamera = false;
@@ -36,10 +36,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func moooer(recognizer: UITapGestureRecognizer) {
-        let mooSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("moo", ofType: "m4a")!)
+    @IBAction func moooer(_ recognizer: UITapGestureRecognizer) {
+        let mooSound = URL(fileURLWithPath: Bundle.main.path(forResource: "moo", ofType: "m4a")!)
         do{
-            audioPlayer = try AVAudioPlayer(contentsOfURL:mooSound)
+            audioPlayer = try AVAudioPlayer(contentsOf:mooSound)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
         }catch {
@@ -47,27 +47,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    @IBAction func openCameraPicker(recognizer: UITapGestureRecognizer) {
+    @IBAction func openCameraPicker(_ recognizer: UITapGestureRecognizer) {
         self.launchCameraPicker()
     }
     
-    @IBAction func openImagePicker(recognizer: UITapGestureRecognizer) {
+    @IBAction func openImagePicker(_ recognizer: UITapGestureRecognizer) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        presentViewController(imagePicker, animated: true, completion: nil)
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
     func launchCameraPicker() {
-        if UIImagePickerController.isCameraDeviceAvailable( UIImagePickerControllerCameraDevice.Rear) {
+        if UIImagePickerController.isCameraDeviceAvailable( UIImagePickerControllerCameraDevice.rear) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-            presentViewController(imagePicker, animated: true, completion: nil)
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            present(imagePicker, animated: true, completion: nil)
         }
     }
     
-    func addToCalendar(title: String, dateResult: NSTextCheckingResult?, location: String, description: String, url: NSURL?) {
+    func addToCalendar(_ title: String, dateResult: NSTextCheckingResult?, location: String, description: String, url: URL?) {
         let eventController = EKEventEditViewController()
         
         let store = EKEventStore()
@@ -82,61 +82,81 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if let urlObj = url {
             
-            event.URL = urlObj
+            event.url = urlObj
         }
         
         if let drObj = dateResult {
-            assert(drObj.resultType == NSTextCheckingType.Date)
+            assert(drObj.resultType == NSTextCheckingResult.CheckingType.date)
             
             event.startDate = drObj.date!
-            event.endDate = drObj.date!.dateByAddingTimeInterval(drObj.duration)
+            event.endDate = drObj.date!.addingTimeInterval(drObj.duration)
         }
         
         eventController.event = event
         
-        let status = EKEventStore.authorizationStatusForEntityType(.Event)
+        let status = EKEventStore.authorizationStatus(for: .event)
         switch status {
-        case .Authorized:
+        case .authorized:
             //self.setNavBarAppearanceStandard()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.presentViewController(eventController, animated: true, completion: nil)
+            DispatchQueue.main.async(execute: { () -> Void in
+                self.present(eventController, animated: true, completion: nil)
             })
             
-        case .NotDetermined:
-            store.requestAccessToEntityType(.Event, completion: { (granted, error) -> Void in
+        case .notDetermined:
+            store.requestAccess(to: .event, completion: { (granted, error) -> Void in
                 if granted == true {
                     //self.setNavBarAppearanceStandard()
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.presentViewController(eventController, animated: true, completion: nil)
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        self.present(eventController, animated: true, completion: nil)
                     })
                 }
             })
-        case .Denied, .Restricted:
+        case .denied, .restricted:
             let alert = UIAlertController(title: "Access Denied", message:"Permission is needed to access the " +
-                "calendar. Go to Settings > Privacy > Calendars to allow access for the CalPal app.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
+                "calendar. Go to Settings > Privacy > Calendars to allow access for the CalPal app.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            self.present(alert, animated: true){}
             return
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String :
-        AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String :
+        Any]) {
             if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                
+                // Save to library
+                UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
+                
                 // CloudVision call
                 let vision = CloudVision(callbackObject: self)
+                
                 // Base64 encode the image and create the request
                 let binaryImageData = vision.base64EncodeImage(pickedImage)
+                
+                // Create request
                 vision.createRequest(binaryImageData)
                 LoadingIndicatorView.show()
                 
             }
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
             
     }
     
-    func eventEditViewController(controller: EKEventEditViewController, didCompleteWithAction action: EKEventEditViewAction){
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func scaleUIImageToSize(_ image: UIImage, size: CGSize) -> UIImage {
+        let hasAlpha = false
+        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+        
+        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        image.draw(in: CGRect(origin: CGPoint.zero, size: size))
+        
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage!
+    }
+    
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction){
+        self.dismiss(animated: true, completion: nil)
     }
     
     func testAddCalendar() {
@@ -149,7 +169,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     
-    func populateCalendarEvent(str: String, title: String) {
+    func populateCalendarEvent(_ str: String, title: String) {
         let urlObj = parseUrlFromStr(str)
         let addrObj = parseAddrFromStr(str)
         let dateObj = parseDateFromStr(str)
@@ -157,7 +177,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var addrStr = ""
 
         if let addr = addrObj {
-            assert(addrObj?.resultType == NSTextCheckingType.Address)
+            assert(addrObj?.resultType == NSTextCheckingResult.CheckingType.address)
             for (_, name) in addr.components! {
                 addrStr = addrStr + name + " "
             }
@@ -166,7 +186,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.addToCalendar(title, dateResult: dateObj, location: addrStr, description: str, url: urlObj)
     }
     
-    func dataParseCallback(dataToParse: NSData) {
+    func connectionError() {
+        LoadingIndicatorView.hide()
+        
+        let alert = UIAlertController(title: "Error", message:"We were unable to connect to the internet. Try again.", preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+        }
+        alert.addAction(OKAction)
+        
+        self.present(alert, animated: true){}
+    }
+    
+    func dataParseCallback(_ dataToParse: Data) {
+        print("received data and parsing")
+        print(dataToParse)
         LoadingIndicatorView.hide()
         // Use SwiftyJSON to parse results
         let json = JSON(data: dataToParse)
@@ -197,19 +231,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.populateCalendarEvent(text, title: title)
                 
             } else {
-                let alert = UIAlertController(title: "No Results", message:"We were unable to parse any text. However, feel free to add the content yourself.", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "No Results", message:"We were unable to parse any text. However, feel free to add the content yourself.", preferredStyle: .alert)
                 
-                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
                     // ...
                 }
                 alert.addAction(cancelAction)
                 
-                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
                     self.populateCalendarEvent("", title:"")
                 }
                 alert.addAction(OKAction)
 
-                self.presentViewController(alert, animated: true){}
+                self.present(alert, animated: true){}
             }
             //TODO: stub for kelly's function
             

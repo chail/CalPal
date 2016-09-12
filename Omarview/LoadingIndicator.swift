@@ -12,13 +12,13 @@ class LoadingIndicatorView {
     static var currentOverlay : UIView?
     
     static func show() {
-        guard let currentMainWindow = UIApplication.sharedApplication().keyWindow else {
+        guard let currentMainWindow = UIApplication.shared.keyWindow else {
             return
         }
         show(currentMainWindow)
     }
     
-    static func show(overlayTarget : UIView) {
+    static func show(_ overlayTarget : UIView) {
         // Clear it first in case it was already shown
         hide()
         
@@ -26,12 +26,12 @@ class LoadingIndicatorView {
         let overlay = UIView(frame: overlayTarget.frame)
         overlay.center = overlayTarget.center
         overlay.alpha = 0
-        overlay.backgroundColor = UIColor.blackColor()
+        overlay.backgroundColor = UIColor.black
         overlayTarget.addSubview(overlay)
-        overlayTarget.bringSubviewToFront(overlay)
+        overlayTarget.bringSubview(toFront: overlay)
         
         // Create and animate the activity indicator
-        let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
         indicator.center = overlay.center
         indicator.startAnimating()
         overlay.addSubview(indicator)

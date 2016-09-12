@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>CalPal</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,6 +24,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>CalPal requires access to your calendar in order to create events.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>CalPal requires your camera in order to take pictures and process posters.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>CalPal requires accessing your photo library in order to process posters you already have.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

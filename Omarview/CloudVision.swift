@@ -8,6 +8,26 @@
 
 import UIKit
 import Foundation
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class CloudVision: NSObject {
     
@@ -18,41 +38,41 @@ class CloudVision: NSObject {
         self.callbackObject = callbackObject
     }
     
-    func base64EncodeImage(image: UIImage) -> String {
+    func base64EncodeImage(_ image: UIImage) -> String {
         var imagedata = UIImagePNGRepresentation(image)
         
         // Resize the image if it exceeds the 2MB API limit
-        if (imagedata?.length > 2097152) {
+        if (imagedata?.count > 2097152) {
             let oldSize: CGSize = image.size
-            let newSize: CGSize = CGSizeMake(800, oldSize.height / oldSize.width * 800)
+            let newSize: CGSize = CGSize(width: 800, height: oldSize.height / oldSize.width * 800)
             imagedata = resizeImage(newSize, image: image)
         }
         
-        return imagedata!.base64EncodedStringWithOptions(.EncodingEndLineWithCarriageReturn)
+        return imagedata!.base64EncodedString(options: .endLineWithCarriageReturn)
     }
     
-    func resizeImage(imageSize: CGSize, image: UIImage) -> NSData {
+    func resizeImage(_ imageSize: CGSize, image: UIImage) -> Data {
         UIGraphicsBeginImageContext(imageSize)
-        image.drawInRect(CGRectMake(0, 0, imageSize.width, imageSize.height))
+        image.draw(in: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        let resizedImage = UIImagePNGRepresentation(newImage)
+        let resizedImage = UIImagePNGRepresentation(newImage!)
         UIGraphicsEndImageContext()
         return resizedImage!
     }
     
-    func createRequest(imageData: String) {
+    func createRequest(_ imageData: String) {
         
         // Create our request URL
         let request = NSMutableURLRequest(
-            URL: NSURL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(API_KEY)")!)
-        request.HTTPMethod = "POST"
+            url: URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(API_KEY)")!)
+        request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue(
-            NSBundle.mainBundle().bundleIdentifier ?? "",
+            Bundle.main.bundleIdentifier ?? "",
             forHTTPHeaderField: "X-Ios-Bundle-Identifier")
         
         // Build our API request
-        let jsonRequest: [String: AnyObject] = [
+        let jsonRequest: [String: Any] = [
             "requests": [
                 "image": [
                     "content": imageData
@@ -67,29 +87,43 @@ class CloudVision: NSObject {
         ]
         
         // Serialize the JSON
-        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(jsonRequest, options: [])
+        request.httpBody = try! JSONSerialization.data(withJSONObject: jsonRequest, options: [])
         
         // Run the request on a background thread
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            self.runRequestOnBackgroundThread(request)
-        });
+        DispatchQueue.main.async {
+            self.runRequestOnBackgroundThread(request as URLRequest)
+        }
+        //DispatchQueue.main.async(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
+        //    self.runRequestOnBackgroundThread(request as URLRequest)
+        //});
     }
     
-    func runRequestOnBackgroundThread(request: NSMutableURLRequest) {
+    func runRequestOnBackgroundThread(_ request: URLRequest) {
         
-        let session = NSURLSession.sharedSession()
+        let session = URLSession.shared
         
         // run the request
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            self.analyzeResults(data!)
+        let task = session.dataTask(with: request, completionHandler: {data, response, error -> Void in
+            self.analyzeResults(data, error: error)
         })
         task.resume()
     }
     
-    func analyzeResults(dataToParse: NSData) {
+    func analyzeResults(_ dataToParse: Data?, error: Error?) {
+        guard error == nil else {
+            print("Error")
+            DispatchQueue.main.async(execute: {
+                self.callbackObject.connectionError()
+            })
+            return
+        }
+            //DispatchQueue.main.async(execute: {
+             //   self.callbackObject.dataParseCallback(dataToParse!)
+            //})
+        
         // Update UI on the main thread
-        dispatch_async(dispatch_get_main_queue(), {
-	    self.callbackObject.dataParseCallback(dataToParse)
+        DispatchQueue.main.async(execute: {
+            self.callbackObject.dataParseCallback(dataToParse!)
         })
         
     }
