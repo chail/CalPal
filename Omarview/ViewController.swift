@@ -131,7 +131,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 let vision = CloudVision(callbackObject: self)
                 
                 // Base64 encode the image and create the request
-                let binaryImageData = vision.base64EncodeImage(pickedImage)
+                let compressedImage = UIImage(data: UIImageJPEGRepresentation(pickedImage, 0.7)!)
+                let binaryImageData = vision.base64EncodeImage(compressedImage!)
                 
                 // Create request
                 vision.createRequest(binaryImageData)
@@ -142,17 +143,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
     }
     
-    func scaleUIImageToSize(_ image: UIImage, size: CGSize) -> UIImage {
-        let hasAlpha = false
-        let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
+    func scaleImage(_ image: UIImage, scale: CGFloat) -> UIImage? {
+        let original = image.size
+        let newSize = CGSize(width: original.width * scale, height: original.height * scale)
         
-        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-        image.draw(in: CGRect(origin: CGPoint.zero, size: size))
-        
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsBeginImageContext(newSize)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let compressedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return scaledImage!
+        return compressedImage
     }
     
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction){
@@ -200,7 +200,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func dataParseCallback(_ dataToParse: Data) {
         print("received data and parsing")
-        print(dataToParse)
         LoadingIndicatorView.hide()
         // Use SwiftyJSON to parse results
         let json = JSON(data: dataToParse)
@@ -222,7 +221,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             let responses: JSON = json["responses"][0]
-            
             let textAnnotations: JSON = responses["textAnnotations"]
             let numLabels: Int = textAnnotations.count
             //var labels: Array<String> = []
@@ -245,7 +243,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
                 self.present(alert, animated: true){}
             }
-            //TODO: stub for kelly's function
             
         }
         

@@ -16,7 +16,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'CalPal' do
-    pod 'SwiftyJSON', :git => 'https://github.com/acegreen/SwiftyJSON.git', :branch => 'swift3'
+    pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
 end
 
 post_install do |installer|
