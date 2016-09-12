@@ -1,4 +1,4 @@
-# CalPal
+# [CalPal](http://calendarpal.me/)
 
 CalPal is a tool that uses computer vision and optical character recognition to detect details from an event poster and autopopulate a calendar event.
 
@@ -22,3 +22,6 @@ CalPal is a tool that uses computer vision and optical character recognition to 
 [enable-vision]: https://console.cloud.google.com/apis/api/vision.googleapis.com/overview?project=_
 [api-key]: https://console.cloud.google.com/apis/credentials?project=_
 [rubygems]: https://rubygems.org/pages/download
+
+##Credits
+CalPal was made at Penn Apps XIV (Fall 2016) by Lucy Chai, Pia Kochar, Eric Li, and Kelly Tan.
