@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import Omarview
+@testable import CalPal
 
-class OmarviewTests: XCTestCase {
+class CalPalTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

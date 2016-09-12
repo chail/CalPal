@@ -17,7 +17,7 @@
 		56ECAC151D84524800BA048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC131D84524800BA048A /* Main.storyboard */; };
 		56ECAC171D84524800BA048A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC161D84524800BA048A /* Assets.xcassets */; };
 		56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC181D84524800BA048A /* LaunchScreen.storyboard */; };
-		56ECAC251D84524800BA048A /* OmarviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC241D84524800BA048A /* OmarviewTests.swift */; };
+		56ECAC251D84524800BA048A /* CalPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC241D84524800BA048A /* CalPalTests.swift */; };
 		9A495A3D8B17E8476EA3B9AF /* Pods_CalPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */; };
 		EC24420A1D84CADE00FB5B47 /* PosterLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2442091D84CADE00FB5B47 /* PosterLine.swift */; };
 		EC24420C1D84CAE500FB5B47 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */; };
@@ -47,7 +47,7 @@
 		56ECAC191D84524800BA048A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56ECAC1B1D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ECAC201D84524800BA048A /* CalPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		56ECAC241D84524800BA048A /* OmarviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmarviewTests.swift; sourceTree = "<group>"; };
+		56ECAC241D84524800BA048A /* CalPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalPalTests.swift; sourceTree = "<group>"; };
 		56ECAC261D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A179AEAC987AE1F186A43844 /* Pods-CalPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalPal/Pods-CalPal.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		56ECAC231D84524800BA048A /* CalPalTests */ = {
 			isa = PBXGroup;
 			children = (
-				56ECAC241D84524800BA048A /* OmarviewTests.swift */,
+				56ECAC241D84524800BA048A /* CalPalTests.swift */,
 				56ECAC261D84524800BA048A /* Info.plist */,
 			);
 			name = CalPalTests;
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56ECAC251D84524800BA048A /* OmarviewTests.swift in Sources */,
+				56ECAC251D84524800BA048A /* CalPalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
