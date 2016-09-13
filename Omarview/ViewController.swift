@@ -124,8 +124,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         Any]) {
             if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 
-                // Save to library
-                UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
+                // Save to library if camera
+                if (picker.sourceType == .camera) {
+                    UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
+                }
                 
                 // CloudVision call
                 let vision = CloudVision(callbackObject: self)
@@ -141,18 +143,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             dismiss(animated: true, completion: nil)
             
-    }
-    
-    func scaleImage(_ image: UIImage, scale: CGFloat) -> UIImage? {
-        let original = image.size
-        let newSize = CGSize(width: original.width * scale, height: original.height * scale)
-        
-        UIGraphicsBeginImageContext(newSize)
-        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-        let compressedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return compressedImage
     }
     
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction){
@@ -189,7 +179,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func connectionError() {
         LoadingIndicatorView.hide()
         
-        let alert = UIAlertController(title: "Error", message:"We were unable to connect to the internet. Try again.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message:"Please try again.", preferredStyle: .alert)
         
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
         }
