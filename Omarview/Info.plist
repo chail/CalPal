@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -28,6 +28,8 @@
 	<string>CalPal requires access to your calendar in order to create events.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>CalPal requires your camera in order to take pictures and process posters.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>CalPal requires access to contacts in order to change calendars and invite friends.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>CalPal requires accessing your photo library in order to process posters you already have.</string>
 	<key>UILaunchStoryboardName</key>

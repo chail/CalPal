@@ -196,8 +196,9 @@
 				TargetAttributes = {
 					56ECAC0B1D84524800BA048A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 5A965HRY3K;
+						DevelopmentTeam = A66P6EM222;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					56ECAC1F1D84524800BA048A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -446,13 +447,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5A965HRY3K;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = A66P6EM222;
 				INFOPLIST_FILE = Omarview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = A66P6EM222.com.eyli.CalPal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eyli.CalPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "08573d53-f550-485c-a7cc-c6d8ef1d990d";
+				PROVISIONING_PROFILE_SPECIFIER = "CalPal Distro";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -464,13 +467,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5A965HRY3K;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = A66P6EM222;
 				INFOPLIST_FILE = Omarview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = A66P6EM222.com.eyli.CalPal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eyli.CalPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "08573d53-f550-485c-a7cc-c6d8ef1d990d";
+				PROVISIONING_PROFILE_SPECIFIER = "CalPal Distro";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
