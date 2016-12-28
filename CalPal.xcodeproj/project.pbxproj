@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0711989C1D848ECB00525F96 /* CloudVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711989B1D848ECB00525F96 /* CloudVision.swift */; };
 		0711989E1D848F6400525F96 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711989D1D848F6400525F96 /* Parser.swift */; };
-		071C421C1D850FF90044D367 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C421B1D850FF90044D367 /* APIKey.swift */; };
 		071C421E1D8510950044D367 /* moo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 071C421D1D8510950044D367 /* moo.m4a */; };
 		079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */; };
+		5655EBAC1E1427DA00D27CED /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 5655EBAB1E1427DA00D27CED /* tessdata */; };
 		56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC0F1D84524800BA048A /* AppDelegate.swift */; };
 		56ECAC121D84524800BA048A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC111D84524800BA048A /* ViewController.swift */; };
 		56ECAC151D84524800BA048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC131D84524800BA048A /* Main.storyboard */; };
 		56ECAC171D84524800BA048A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC161D84524800BA048A /* Assets.xcassets */; };
 		56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC181D84524800BA048A /* LaunchScreen.storyboard */; };
 		56ECAC251D84524800BA048A /* CalPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC241D84524800BA048A /* CalPalTests.swift */; };
+		5FB20840844CDD6720409695 /* Pods_CalPalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AAFB7CB149D1A250F4B46C /* Pods_CalPalTests.framework */; };
 		9A495A3D8B17E8476EA3B9AF /* Pods_CalPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */; };
-		EC24420A1D84CADE00FB5B47 /* PosterLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2442091D84CADE00FB5B47 /* PosterLine.swift */; };
-		EC24420C1D84CAE500FB5B47 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0711989B1D848ECB00525F96 /* CloudVision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudVision.swift; sourceTree = "<group>"; };
 		0711989D1D848F6400525F96 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		071C421B1D850FF90044D367 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		071C421D1D8510950044D367 /* moo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = moo.m4a; sourceTree = "<group>"; };
 		079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		37AAFB7CB149D1A250F4B46C /* Pods_CalPalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalPalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5655EBAB1E1427DA00D27CED /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		56ECAC0C1D84524800BA048A /* CalPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ECAC0F1D84524800BA048A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56ECAC111D84524800BA048A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,11 +47,11 @@
 		56ECAC201D84524800BA048A /* CalPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ECAC241D84524800BA048A /* CalPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalPalTests.swift; sourceTree = "<group>"; };
 		56ECAC261D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D0AC763A67CFB44D6053F1 /* Pods-CalPalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalPalTests/Pods-CalPalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A34D549061D5FD36BB4886C /* Pods-CalPalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalPalTests/Pods-CalPalTests.release.xcconfig"; sourceTree = "<group>"; };
 		A179AEAC987AE1F186A43844 /* Pods-CalPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-CalPal/Pods-CalPal.release.xcconfig"; sourceTree = "<group>"; };
 		D02D03A1FAAE7E695D9467F1 /* Pods-CalPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CalPal/Pods-CalPal.debug.xcconfig"; sourceTree = "<group>"; };
-		EC2442091D84CADE00FB5B47 /* PosterLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterLine.swift; sourceTree = "<group>"; };
-		EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB20840844CDD6720409695 /* Pods_CalPalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +79,8 @@
 			children = (
 				D02D03A1FAAE7E695D9467F1 /* Pods-CalPal.debug.xcconfig */,
 				A179AEAC987AE1F186A43844 /* Pods-CalPal.release.xcconfig */,
+				75D0AC763A67CFB44D6053F1 /* Pods-CalPalTests.debug.xcconfig */,
+				9A34D549061D5FD36BB4886C /* Pods-CalPalTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -108,21 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */,
-				EC24420B1D84CAE500FB5B47 /* ParseJSON.swift */,
-				EC2442091D84CADE00FB5B47 /* PosterLine.swift */,
 				56ECAC0F1D84524800BA048A /* AppDelegate.swift */,
-				071C421B1D850FF90044D367 /* APIKey.swift */,
 				56ECAC111D84524800BA048A /* ViewController.swift */,
 				0711989D1D848F6400525F96 /* Parser.swift */,
-				0711989B1D848ECB00525F96 /* CloudVision.swift */,
 				56ECAC131D84524800BA048A /* Main.storyboard */,
+				5655EBAB1E1427DA00D27CED /* tessdata */,
 				56ECAC161D84524800BA048A /* Assets.xcassets */,
 				071C421D1D8510950044D367 /* moo.m4a */,
 				56ECAC181D84524800BA048A /* LaunchScreen.storyboard */,
 				56ECAC1B1D84524800BA048A /* Info.plist */,
 			);
-			name = CalPal;
-			path = Omarview;
+			path = CalPal;
 			sourceTree = "<group>";
 		};
 		56ECAC231D84524800BA048A /* CalPalTests */ = {
@@ -131,14 +128,14 @@
 				56ECAC241D84524800BA048A /* CalPalTests.swift */,
 				56ECAC261D84524800BA048A /* Info.plist */,
 			);
-			name = CalPalTests;
-			path = OmarviewTests;
+			path = CalPalTests;
 			sourceTree = "<group>";
 		};
 		AF5B5A1C155F45F44EE62393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				75F1452E222C7CBA2B24469A /* Pods_CalPal.framework */,
+				37AAFB7CB149D1A250F4B46C /* Pods_CalPalTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56ECAC2C1D84524800BA048A /* Build configuration list for PBXNativeTarget "CalPalTests" */;
 			buildPhases = (
+				DE054ED9FA0D0D73C1EDF9CD /* [CP] Check Pods Manifest.lock */,
 				56ECAC1C1D84524800BA048A /* Sources */,
 				56ECAC1D1D84524800BA048A /* Frameworks */,
 				56ECAC1E1D84524800BA048A /* Resources */,
+				8555FE99E42222C545149FB9 /* [CP] Embed Pods Frameworks */,
+				69BD9149A0358A295ACF9070 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +196,9 @@
 				TargetAttributes = {
 					56ECAC0B1D84524800BA048A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = A66P6EM222;
+						DevelopmentTeam = X3ZX2F25Z3;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					56ECAC1F1D84524800BA048A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -234,6 +234,7 @@
 			files = (
 				56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */,
 				56ECAC171D84524800BA048A /* Assets.xcassets in Resources */,
+				5655EBAC1E1427DA00D27CED /* tessdata in Resources */,
 				071C421E1D8510950044D367 /* moo.m4a in Resources */,
 				56ECAC151D84524800BA048A /* Main.storyboard in Resources */,
 			);
@@ -264,6 +265,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalPal/Pods-CalPal-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		69BD9149A0358A295ACF9070 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalPalTests/Pods-CalPalTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8555FE99E42222C545149FB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalPalTests/Pods-CalPalTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		87D43286519138B8FE5AEC64 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +308,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CalPal/Pods-CalPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE054ED9FA0D0D73C1EDF9CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FA415C906D52AD823A3EAC00 /* [CP] Check Pods Manifest.lock */ = {
@@ -303,12 +349,8 @@
 			files = (
 				0711989E1D848F6400525F96 /* Parser.swift in Sources */,
 				56ECAC121D84524800BA048A /* ViewController.swift in Sources */,
-				0711989C1D848ECB00525F96 /* CloudVision.swift in Sources */,
 				079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */,
-				EC24420A1D84CADE00FB5B47 /* PosterLine.swift in Sources */,
 				56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */,
-				071C421C1D850FF90044D367 /* APIKey.swift in Sources */,
-				EC24420C1D84CAE500FB5B47 /* ParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +415,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -421,6 +464,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -447,15 +491,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = A66P6EM222;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = X3ZX2F25Z3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Omarview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eyli.CalPal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CalPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08573d53-f550-485c-a7cc-c6d8ef1d990d";
-				PROVISIONING_PROFILE_SPECIFIER = "CalPal Distro";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -467,23 +512,26 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = A66P6EM222;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = X3ZX2F25Z3;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Omarview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eyli.CalPal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CalPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "08573d53-f550-485c-a7cc-c6d8ef1d990d";
-				PROVISIONING_PROFILE_SPECIFIER = "CalPal Distro";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		56ECAC2D1D84524800BA048A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75D0AC763A67CFB44D6053F1 /* Pods-CalPalTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = X3ZX2F25Z3;
 				INFOPLIST_FILE = OmarviewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.OmarviewTests;
@@ -495,8 +543,10 @@
 		};
 		56ECAC2E1D84524800BA048A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A34D549061D5FD36BB4886C /* Pods-CalPalTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = X3ZX2F25Z3;
 				INFOPLIST_FILE = OmarviewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.OmarviewTests;

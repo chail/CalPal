@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero" translatesAutoresizingMaskIntoConstraints="NO" id="g5T-f2-RXZ">
+                                <rect key="frame" x="304" y="100" width="184" height="251"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Unk-dC-Oum" appends="YES" id="q8M-kx-2Fm"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dP5-1y-77v">
+                                <rect key="frame" x="283" y="453" width="52" height="42"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="NFK-y7-886"/>
+                                    <constraint firstAttribute="height" constant="42" id="NVW-v0-VA4"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bxs-0z-wMs" appends="YES" id="iY5-I8-c3o"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GalleryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="B0x-mB-CfB">
+                                <rect key="frame" x="430" y="451" width="58" height="46"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="CDi-gN-dvF"/>
+                                    <constraint firstAttribute="width" constant="58" id="qcj-Qd-cFS"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="f0y-4E-Slz" appends="YES" id="z1s-f8-X15"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B0x-mB-CfB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="75" id="4qj-ja-ngI"/>
+                            <constraint firstItem="g5T-f2-RXZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="12" id="CdX-WP-AlH"/>
+                            <constraint firstItem="B0x-mB-CfB" firstAttribute="top" secondItem="g5T-f2-RXZ" secondAttribute="bottom" constant="100" id="FXK-if-sUe"/>
+                            <constraint firstItem="dP5-1y-77v" firstAttribute="top" secondItem="g5T-f2-RXZ" secondAttribute="bottom" constant="102" id="JV5-ZK-gJ5"/>
+                            <constraint firstItem="dP5-1y-77v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-75" id="oIH-bZ-QUi"/>
+                            <constraint firstItem="g5T-f2-RXZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="zHF-bE-f7t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bxs-0z-wMs">
+                    <connections>
+                        <action selector="openCameraPicker:" destination="BYZ-38-t0r" id="MhN-g9-3IS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="f0y-4E-Slz">
+                    <connections>
+                        <action selector="openImagePicker:" destination="BYZ-38-t0r" id="6c2-jo-m4B"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Unk-dC-Oum">
+                    <connections>
+                        <action selector="moooer:" destination="BYZ-38-t0r" id="bBv-sd-EkA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CameraIcon" width="115" height="80"/>
+        <image name="GalleryIcon" width="117" height="117"/>
+        <image name="Hero" width="184" height="251"/>
+    </resources>
+</document>
