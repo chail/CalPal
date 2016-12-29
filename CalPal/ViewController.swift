@@ -140,6 +140,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     // run OCR in background
                     backgroundThread(background: {
                         tesseract.delegate = self
+                        tesseract.charWhitelist = "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?"
                         tesseract.image = img.g8_grayScale()
                         tesseract.recognize()
                     },

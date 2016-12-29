@@ -11,7 +11,6 @@
 		071C421E1D8510950044D367 /* moo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 071C421D1D8510950044D367 /* moo.m4a */; };
 		079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */; };
 		5655EBAC1E1427DA00D27CED /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 5655EBAB1E1427DA00D27CED /* tessdata */; };
-		566CCB941E14CBFA0001FC33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 566CCB931E14CBFA0001FC33 /* Info.plist */; };
 		56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC0F1D84524800BA048A /* AppDelegate.swift */; };
 		56ECAC121D84524800BA048A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC111D84524800BA048A /* ViewController.swift */; };
 		56ECAC151D84524800BA048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC131D84524800BA048A /* Main.storyboard */; };
@@ -192,7 +191,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Lucy Chai";
 				TargetAttributes = {
 					56ECAC0B1D84524800BA048A = {
@@ -235,7 +234,6 @@
 			files = (
 				56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */,
 				56ECAC171D84524800BA048A /* Assets.xcassets in Resources */,
-				566CCB941E14CBFA0001FC33 /* Info.plist in Resources */,
 				5655EBAC1E1427DA00D27CED /* tessdata in Resources */,
 				071C421E1D8510950044D367 /* moo.m4a in Resources */,
 				56ECAC151D84524800BA048A /* Main.storyboard in Resources */,
