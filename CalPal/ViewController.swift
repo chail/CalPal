@@ -68,6 +68,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // adds event to calendar
     func addToCalendar(_ title: String, dateResult: NSTextCheckingResult?, location: String, description: String, url: URL?) {
         let eventController = EKEventEditViewController()
         
@@ -121,6 +122,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // called after image has been picked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String :
         Any]) {
             if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -130,17 +132,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
                 }
                 
-                dismiss(animated: true, completion: nil)
+                //let img = UIImage(named: "Image")
+                let img = pickedImage
                 
-                //TODO: fix loading indicator
+                if let tesseract = G8Tesseract(language: "eng") {
+
+                    // run OCR in background
+                    backgroundThread(background: {
+                        tesseract.delegate = self
+                        tesseract.image = img.g8_grayScale()
+                        tesseract.recognize()
+                    },
+                    completion: {
+                        LoadingIndicatorView.hide()
+                        
+                        let info = tesseract.recognizedBlocks(by: G8PageIteratorLevel.textline)
+                        
+                        let text = tesseract.recognizedText
+                        
+                        var maxHeight = 0
+                        var title = ""
+                        for item in info! {
+                            let b = item as? G8RecognizedBlock
+                            let height = b?.boundingBox(atImageOf: (img.size)).height
+                            if Int(height!) > maxHeight {
+                                maxHeight = Int(height!)
+                                title = (b?.text)!
+                            }
+                        }
+
+                        self.populateCalendarEvent(text!, title: title)
+                    })
+                }
                 LoadingIndicatorView.show()
                 
-                processText(img: pickedImage)
-                
             }
-            else {
-                dismiss(animated: true, completion: nil)
-            }
+            dismiss(animated: true, completion: nil)
     }
 
     
@@ -148,11 +175,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.dismiss(animated: true, completion: nil)
     }
     
+    // prints progress to debugging console
     func progressImageRecognition(for tesseract: G8Tesseract!) {
         print("Recognition Progress \(tesseract.progress) %")
     }
     
     
+    // parse info from OCR text and add calendar event
     func populateCalendarEvent(_ str: String, title: String) {
         let urlObj = parseUrlFromStr(str)
         let addrObj = parseAddrFromStr(str)
@@ -170,38 +199,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.addToCalendar(title, dateResult: dateObj, location: addrStr, description: str, url: urlObj)
     }
     
-    func processText(img:UIImage?) {
+    
+    // create a background thread and callback
+    func backgroundThread(background: (() -> Void)? = nil, completion: (() -> Void)? = nil) {
         
-        if let tesseract = G8Tesseract(language: "eng") {
-            tesseract.delegate = self
+        DispatchQueue.global(qos: .background).async {
+            if(background != nil){ background!(); }
             
-            tesseract.image = img?.g8_grayScale()
-            tesseract.recognize()
-            
-            // TODO: fix loading indicator
-            LoadingIndicatorView.hide()
-            
-            let info = tesseract.recognizedBlocks(by: G8PageIteratorLevel.textline)
-            
-            let text = tesseract.recognizedText
-            
-            var maxHeight = 0
-            var title = ""
-            for item in info! {
-                let b = item as? G8RecognizedBlock
-                let height = b?.boundingBox(atImageOf: (img?.size)!).height
-                
-                if Int(height!) > maxHeight {
-                    maxHeight = Int(height!)
-                    title = (b?.text)!
-                }
+            DispatchQueue.main.async {
+                if(completion != nil){ completion!(); }
             }
-            
-            self.populateCalendarEvent(text!, title: title)
-            
         }
     }
     
+    // hard-coded string for testing parsing
     func testAddCalendar() {
         let str = "BORDER CANTOS RICHARD MISRACH & GUILLERMO GALINDO TUESDAY, SEPTEMBER 27 AT 7:30-9:00PM MCCORMICK 101 Join us for an evening of photography by Richard Mis- rach, who has spent years documenting thet.S Mexican border, and music by Guillermo Galindo who has made musical instruments out of remains left bymigrants trying to cross the www.hackerswift.com border. WILSON COLLEGE SIGNATURE LECTURE SERIES FALL 2016 GABY MORENO LATIN GRAMMY AWARD WINNER WEDNESDAY OCTOBER 26 AT 8:00PM RICHARDSON AUDITORIUM Guatemalan singer Gaby Moreno is the winnerof the 2013 Latin Grammy for Best NewArtist, and will be performing a wonderful program with herband in Richardson. "
         

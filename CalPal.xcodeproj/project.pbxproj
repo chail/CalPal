@@ -11,6 +11,7 @@
 		071C421E1D8510950044D367 /* moo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 071C421D1D8510950044D367 /* moo.m4a */; };
 		079B720D1D84E24F00A4DEA8 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */; };
 		5655EBAC1E1427DA00D27CED /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 5655EBAB1E1427DA00D27CED /* tessdata */; };
+		566CCB941E14CBFA0001FC33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 566CCB931E14CBFA0001FC33 /* Info.plist */; };
 		56ECAC101D84524800BA048A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC0F1D84524800BA048A /* AppDelegate.swift */; };
 		56ECAC121D84524800BA048A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ECAC111D84524800BA048A /* ViewController.swift */; };
 		56ECAC151D84524800BA048A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ECAC131D84524800BA048A /* Main.storyboard */; };
@@ -37,13 +38,13 @@
 		079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		37AAFB7CB149D1A250F4B46C /* Pods_CalPalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalPalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5655EBAB1E1427DA00D27CED /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		566CCB931E14CBFA0001FC33 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ECAC0C1D84524800BA048A /* CalPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ECAC0F1D84524800BA048A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56ECAC111D84524800BA048A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56ECAC141D84524800BA048A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56ECAC161D84524800BA048A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56ECAC191D84524800BA048A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		56ECAC1B1D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ECAC201D84524800BA048A /* CalPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ECAC241D84524800BA048A /* CalPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalPalTests.swift; sourceTree = "<group>"; };
 		56ECAC261D84524800BA048A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		56ECAC0E1D84524800BA048A /* CalPal */ = {
 			isa = PBXGroup;
 			children = (
+				566CCB931E14CBFA0001FC33 /* Info.plist */,
 				079B720C1D84E24F00A4DEA8 /* LoadingIndicator.swift */,
 				56ECAC0F1D84524800BA048A /* AppDelegate.swift */,
 				56ECAC111D84524800BA048A /* ViewController.swift */,
@@ -117,7 +119,6 @@
 				56ECAC161D84524800BA048A /* Assets.xcassets */,
 				071C421D1D8510950044D367 /* moo.m4a */,
 				56ECAC181D84524800BA048A /* LaunchScreen.storyboard */,
-				56ECAC1B1D84524800BA048A /* Info.plist */,
 			);
 			path = CalPal;
 			sourceTree = "<group>";
@@ -234,6 +235,7 @@
 			files = (
 				56ECAC1A1D84524800BA048A /* LaunchScreen.storyboard in Resources */,
 				56ECAC171D84524800BA048A /* Assets.xcassets in Resources */,
+				566CCB941E14CBFA0001FC33 /* Info.plist in Resources */,
 				5655EBAC1E1427DA00D27CED /* tessdata in Resources */,
 				071C421E1D8510950044D367 /* moo.m4a in Resources */,
 				56ECAC151D84524800BA048A /* Main.storyboard in Resources */,
@@ -494,7 +496,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X3ZX2F25Z3;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Omarview/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CalPal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CalPal;
@@ -515,7 +517,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X3ZX2F25Z3;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Omarview/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CalPal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CalPal;
