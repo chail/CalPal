@@ -9,7 +9,7 @@ CalPal is a tool that uses computer vision and optical character recognition to 
 3. Open the file `CalPal.xcworkspace` to edit
 
 ## Notes
-OCR is done using the tesseract library for swift. The Pod is based on Tesseract 3.03, so it needs version 3.02 of the training data. See [Data files][datafiles] and make sure you download the appropriate version of the data files. The Tesseract iOS framework is linked [here][tesseract-ios]
+OCR is done using the tesseract library for swift. The Pod is based on Tesseract 3.03, so it needs version 3.02 of the training data. See [Data files][datafiles] and make sure you download the appropriate version of the data files (the correct version is already included here). The Tesseract iOS framework is linked [here][tesseract-ios]
 
 [getting-started]: https://cloud.google.com/vision/docs/getting-started
 [cloud-console]: https://console.cloud.google.com
