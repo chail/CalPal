@@ -2,7 +2,7 @@
 
 CalPal is a tool that uses computer vision and optical character recognition to detect details from an event poster and autopopulate a calendar event.
 
-##Installation Instructions
+## Installation Instructions
 1. If you don't have Cocoa Pods already installed, install it using `sudo gem install cocoapods`.
   - You'll need to have [RubyGems][rubygems] installed in order to install CocoaPods.
 2. Once that is complete, install the Podfile by running `pod install`.
@@ -23,5 +23,5 @@ CalPal is a tool that uses computer vision and optical character recognition to 
 [api-key]: https://console.cloud.google.com/apis/credentials?project=_
 [rubygems]: https://rubygems.org/pages/download
 
-##Credits
+## Credits
 CalPal was made at Penn Apps XIV (Fall 2016) by Lucy Chai, Pia Kochar, Eric Li, and Kelly Tan.
